@@ -1,0 +1,8 @@
+---
+lockfile_version: 1
+depends:
+- name: inspec-aws
+  resolved_source:
+    url: https://github.com/inspec/inspec-aws/archive/master.tar.gz
+    sha256: c93b80291cbe53a063e309044f58946fd018ff5c4747614bdc4d944b81b4f6d7
+  version_constraints: []

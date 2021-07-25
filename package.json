@@ -1,6 +1,8 @@
 {
   "name": "infrastructure-test-examples",
   "version": "0.1.0",
+  "license": "MIT",
+  "repository": "github:jennapederson/infrastructure-test-examples",
   "bin": {
     "infrastructure-test-examples": "bin/infrastructure-test-examples.js"
   },

@@ -2,9 +2,14 @@ title "Verify S3 Buckets"
 
 control "01-s3-bucket" do
   impact 1.0
-  title "Verify S3 Buckets Are Private"
+  title "Verify S3 Bucket is Private"
 
-  describe aws_s3_bucket('cdk-test-bucket-jenna') do
+  json = inspec.profile.file('outputs.json')
+  outputs = JSON.parse(json)
+
+  BUCKET_NAME = outputs['FullStackAppStack']['BucketName']
+
+  describe aws_s3_bucket(BUCKET_NAME) do
     it { should exist }
     it { should_not be_public }
     its('bucket_policy') { should be_empty }

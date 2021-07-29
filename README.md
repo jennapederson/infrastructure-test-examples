@@ -17,7 +17,7 @@ Following the instructions here, you can use environment variables or a profile 
 1. Synthesize
 `cdk synth`
 1. Deploy your changes  
-`cdk deploy --all --parameters FullStackAppStack:keyPairName=<your key pair name> --parameters S3BucketStack:bucketName=<your bucket name> --outputs-file inspec/outputs.json`
+`cdk deploy --all --parameters FullStackAppStack:keyPairName=<your key pair name> --parameters S3BucketStack:bucketName=<your bucket name> --outputs-file inspec/files/outputs.json`
 1. Run InSpec tests  
 `inspec exec inspec -t aws://`  
 If you get an error about the lockfile, delete `inspec/inspec.lock` and rerun the command.
